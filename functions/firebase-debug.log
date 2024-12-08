@@ -1,0 +1,203 @@
+[debug] [2024-12-07T23:45:54.437Z] ----------------------------------------------------------------------
+[debug] [2024-12-07T23:45:54.439Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Nirto\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions
+[debug] [2024-12-07T23:45:54.439Z] CLI Version:   13.28.0
+[debug] [2024-12-07T23:45:54.440Z] Platform:      win32
+[debug] [2024-12-07T23:45:54.440Z] Node Version:  v20.17.0
+[debug] [2024-12-07T23:45:54.440Z] Time:          Sun Dec 08 2024 02:45:54 GMT+0300 (Arabian Standard Time)
+[debug] [2024-12-07T23:45:54.440Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-12-07T23:45:54.535Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-12-07T23:45:54.536Z] > authorizing via signed-in user (mikebedy@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2024-12-07T23:45:54.543Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-12-07T23:45:54.544Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project clone-68e92. This may result in unexpected behavior. 
+[debug] [2024-12-07T23:45:54.548Z] [hub] writing locator at C:\Users\Nirto\AppData\Local\Temp\hub-clone-68e92.json
+[debug] [2024-12-07T23:45:54.580Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-12-07T23:45:54.581Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-12-07T23:45:54.581Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-12-07T23:45:54.581Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, auth, firestore, database, hosting, pubsub, storage, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mapphosting, auth, firestore, database, hosting, pubsub, storage, dataconnect\u001b[22m"}}
+[debug] [2024-12-07T23:45:54.585Z] defaultcredentials: writing to file C:\Users\Nirto\AppData\Roaming\firebase\mikebedy_gmail_com_application_default_credentials.json
+[debug] [2024-12-07T23:45:54.588Z] Setting GAC to C:\Users\Nirto\AppData\Roaming\firebase\mikebedy_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Nirto\\AppData\\Roaming\\firebase\\mikebedy_gmail_com_application_default_credentials.json"}}
+[debug] [2024-12-07T23:45:54.588Z] Checked if tokens are valid: true, expires at: 1733617230134
+[debug] [2024-12-07T23:45:54.589Z] Checked if tokens are valid: true, expires at: 1733617230134
+[debug] [2024-12-07T23:45:54.589Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/clone-68e92/adminSdkConfig [none]
+[debug] [2024-12-07T23:45:55.422Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/clone-68e92/adminSdkConfig 200
+[debug] [2024-12-07T23:45:55.422Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/clone-68e92/adminSdkConfig {"projectId":"clone-68e92","storageBucket":"clone-68e92.firebasestorage.app"}
+[info] i  functions: Watching "C:\Users\Nirto\Desktop\Evangadi\phase 4\New folder\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\Nirto\\Desktop\\Evangadi\\phase 4\\New folder\\functions\" for Cloud Functions..."}}
+[debug] [2024-12-07T23:45:55.446Z] Validating nodejs source
+[debug] [2024-12-07T23:45:57.327Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1",
+    "stripe": "^17.4.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-12-07T23:45:57.328Z] Building nodejs source
+[debug] [2024-12-07T23:45:57.328Z] Failed to find version of module node: reached end of search path C:\Users\Nirto\Desktop\Evangadi\phase 4\New folder\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-12-07T23:45:57.332Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-12-07T23:45:57.337Z] Found firebase-functions binary at 'C:\Users\Nirto\Desktop\Evangadi\phase 4\New folder\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8149
+
+[debug] [2024-12-07T23:45:59.190Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] +  functions[us-central1-api]: http function initialized (http://127.0.0.1:5001/clone-68e92/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/clone-68e92/us-central1/api)."}}
+[debug] [2024-12-07T23:46:04.247Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-12-07T23:46:26.800Z] [work-queue] {"queuedWork":["/clone-68e92/us-central1/api-2024-12-07T23:46:26.800Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-12-07T23:46:26.801Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/clone-68e92/us-central1/api-2024-12-07T23:46:26.800Z"],"workRunningCount":1}
+[debug] [2024-12-07T23:46:26.802Z] Accepted request GET /clone-68e92/us-central1/api --> us-central1-api
+[debug] [2024-12-07T23:46:26.807Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-12-07T23:46:26.808Z] [functions] Got req.url=/clone-68e92/us-central1/api, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/clone-68e92/us-central1/api, mapping to path=/"}}
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-12-07T23:46:26.823Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2024-12-07T23:46:26.824Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2024-12-07T23:46:28.582Z] [runtime-status] [164248] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"C:\\Users\\Nirto\\Desktop\\Evangadi\\phase 4\\New folder\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [164248] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"C:\\\\Users\\\\Nirto\\\\Desktop\\\\Evangadi\\\\phase 4\\\\New folder\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2024-12-07T23:46:28.583Z] [runtime-status] [164248] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.1.1","resolution":"C:\\Users\\Nirto\\Desktop\\Evangadi\\phase 4\\New folder\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [164248] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.1.1\",\"resolution\":\"C:\\\\Users\\\\Nirto\\\\Desktop\\\\Evangadi\\\\phase 4\\\\New folder\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2024-12-07T23:46:28.584Z] [runtime-status] [164248] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [164248] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2024-12-07T23:46:28.585Z] [runtime-status] [164248] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.1.1","resolution":"C:\\Users\\Nirto\\Desktop\\Evangadi\\phase 4\\New folder\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [164248] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.1.1\",\"resolution\":\"C:\\\\Users\\\\Nirto\\\\Desktop\\\\Evangadi\\\\phase 4\\\\New folder\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2024-12-07T23:46:28.921Z] [runtime-status] [164248] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [164248] Checked functions.config() {\"config\":{}}"}}
+[debug] [2024-12-07T23:46:28.921Z] [runtime-status] [164248] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"6.1.1","resolution":"C:\\Users\\Nirto\\Desktop\\Evangadi\\phase 4\\New folder\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [164248] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"6.1.1\",\"resolution\":\"C:\\\\Users\\\\Nirto\\\\Desktop\\\\Evangadi\\\\phase 4\\\\New folder\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}}"}}
+[debug] [2024-12-07T23:46:28.922Z] [runtime-status] [164248] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.1.1","resolution":"C:\\Users\\Nirto\\Desktop\\Evangadi\\phase 4\\New folder\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [164248] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.1.1\",\"resolution\":\"C:\\\\Users\\\\Nirto\\\\Desktop\\\\Evangadi\\\\phase 4\\\\New folder\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2024-12-07T23:46:28.933Z] [runtime-status] [164248] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"C:\\Users\\Nirto\\Desktop\\Evangadi\\phase 4\\New folder\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [164248] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"C:\\\\Users\\\\Nirto\\\\Desktop\\\\Evangadi\\\\phase 4\\\\New folder\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2024-12-07T23:46:28.937Z] [runtime-status] [164248] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.1.1","resolution":"C:\\Users\\Nirto\\Desktop\\Evangadi\\phase 4\\New folder\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [164248] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.1.1\",\"resolution\":\"C:\\\\Users\\\\Nirto\\\\Desktop\\\\Evangadi\\\\phase 4\\\\New folder\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2024-12-07T23:46:28.938Z] [runtime-status] [164248] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"12.7.0","resolution":"C:\\Users\\Nirto\\Desktop\\Evangadi\\phase 4\\New folder\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [164248] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"C:\\\\Users\\\\Nirto\\\\Desktop\\\\Evangadi\\\\phase 4\\\\New folder\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2024-12-07T23:46:29.165Z] [runtime-status] [164248] Functions runtime initialized. {"cwd":"C:\\Users\\Nirto\\Desktop\\Evangadi\\phase 4\\New folder\\functions","node_version":"20.17.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [164248] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\Nirto\\\\Desktop\\\\Evangadi\\\\phase 4\\\\New folder\\\\functions\",\"node_version\":\"20.17.0\"}"}}
+[debug] [2024-12-07T23:46:29.165Z] [runtime-status] [164248] Listening to port: \\?\pipe\fire_emu_74c30e003f6386b1 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [164248] Listening to port: \\\\?\\pipe\\fire_emu_74c30e003f6386b1"}}
+[debug] [2024-12-07T23:46:29.221Z] [worker-us-central1-api-f84c7f3d-92be-40ee-a5c8-8351595ef135]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-f84c7f3d-92be-40ee-a5c8-8351595ef135]: IDLE"}}
+[debug] [2024-12-07T23:46:29.221Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2024-12-07T23:46:29.223Z] [worker-us-central1-api-f84c7f3d-92be-40ee-a5c8-8351595ef135]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-f84c7f3d-92be-40ee-a5c8-8351595ef135]: BUSY"}}
+[debug] [2024-12-07T23:46:29.232Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 9.2967ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 9.2967ms"}}
+[debug] [2024-12-07T23:46:29.234Z] [worker-us-central1-api-f84c7f3d-92be-40ee-a5c8-8351595ef135]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-f84c7f3d-92be-40ee-a5c8-8351595ef135]: IDLE"}}
+[debug] [2024-12-07T23:46:29.234Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-12-07T23:46:29.235Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-12-07T23:46:29.236Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-12-07T23:46:29.577Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2024-12-07T23:48:02.631Z] File C:\Users\Nirto\Desktop\Evangadi\phase 4\New folder\functions\index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File C:\\Users\\Nirto\\Desktop\\Evangadi\\phase 4\\New folder\\functions\\index.js changed, reloading triggers"}}
+[debug] [2024-12-07T23:48:03.648Z] Validating nodejs source
+[debug] [2024-12-07T23:48:04.587Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1",
+    "stripe": "^17.4.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-12-07T23:48:04.588Z] Building nodejs source
+[debug] [2024-12-07T23:48:04.588Z] Failed to find version of module node: reached end of search path C:\Users\Nirto\Desktop\Evangadi\phase 4\New folder\functions\node_modules
+[warn] !  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-12-07T23:48:04.592Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-12-07T23:48:04.602Z] Found firebase-functions binary at 'C:\Users\Nirto\Desktop\Evangadi\phase 4\New folder\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8386
+
+[debug] [2024-12-07T23:48:05.395Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[debug] [2024-12-07T23:48:07.372Z] [work-queue] {"queuedWork":["/clone-68e92/us-central1/api-2024-12-07T23:48:07.372Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-12-07T23:48:07.373Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/clone-68e92/us-central1/api-2024-12-07T23:48:07.372Z"],"workRunningCount":1}
+[debug] [2024-12-07T23:48:07.373Z] Accepted request GET /clone-68e92/us-central1/api --> us-central1-api
+[debug] [2024-12-07T23:48:07.378Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-12-07T23:48:07.378Z] [functions] Got req.url=/clone-68e92/us-central1/api, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/clone-68e92/us-central1/api, mapping to path=/"}}
+[debug] [2024-12-07T23:48:07.378Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2024-12-07T23:48:07.379Z] [worker-us-central1-api-f84c7f3d-92be-40ee-a5c8-8351595ef135]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-f84c7f3d-92be-40ee-a5c8-8351595ef135]: BUSY"}}
+[debug] [2024-12-07T23:48:07.383Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 4.0798ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 4.0798ms"}}
+[debug] [2024-12-07T23:48:07.383Z] [worker-us-central1-api-f84c7f3d-92be-40ee-a5c8-8351595ef135]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-f84c7f3d-92be-40ee-a5c8-8351595ef135]: IDLE"}}
+[debug] [2024-12-07T23:48:07.384Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-12-07T23:48:07.384Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-12-07T23:48:07.384Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[debug] [2024-12-07T23:48:10.436Z] [worker-pool] Shutting down IDLE worker (us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Shutting down IDLE worker (us-central1-api)"}}
+[debug] [2024-12-07T23:48:10.436Z] [worker-us-central1-api-f84c7f3d-92be-40ee-a5c8-8351595ef135]: FINISHING {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-f84c7f3d-92be-40ee-a5c8-8351595ef135]: FINISHING"}}
+[debug] [2024-12-07T23:48:10.450Z] [worker-us-central1-api-f84c7f3d-92be-40ee-a5c8-8351595ef135]: exited {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-f84c7f3d-92be-40ee-a5c8-8351595ef135]: exited"}}
+[debug] [2024-12-07T23:48:10.451Z] [worker-us-central1-api-f84c7f3d-92be-40ee-a5c8-8351595ef135]: FINISHED {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-f84c7f3d-92be-40ee-a5c8-8351595ef135]: FINISHED"}}
+[debug] [2024-12-07T23:48:15.287Z] [work-queue] {"queuedWork":["/clone-68e92/us-central1/api-2024-12-07T23:48:15.287Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-12-07T23:48:15.287Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/clone-68e92/us-central1/api-2024-12-07T23:48:15.287Z"],"workRunningCount":1}
+[debug] [2024-12-07T23:48:15.287Z] Accepted request GET /clone-68e92/us-central1/api --> us-central1-api
+[debug] [2024-12-07T23:48:15.290Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-12-07T23:48:15.291Z] [functions] Got req.url=/clone-68e92/us-central1/api, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/clone-68e92/us-central1/api, mapping to path=/"}}
+[debug] [2024-12-07T23:48:15.291Z] [worker-pool] Cleaned up workers for us-central1-api: 1 --> 0 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Cleaned up workers for us-central1-api: 1 --> 0"}}
+[info] i  functions: Loaded environment variables from .env. 
+[debug] [2024-12-07T23:48:15.300Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2024-12-07T23:48:15.301Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2024-12-07T23:48:17.171Z] [runtime-status] [166872] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"C:\\Users\\Nirto\\Desktop\\Evangadi\\phase 4\\New folder\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [166872] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"C:\\\\Users\\\\Nirto\\\\Desktop\\\\Evangadi\\\\phase 4\\\\New folder\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2024-12-07T23:48:17.174Z] [runtime-status] [166872] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.1.1","resolution":"C:\\Users\\Nirto\\Desktop\\Evangadi\\phase 4\\New folder\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [166872] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.1.1\",\"resolution\":\"C:\\\\Users\\\\Nirto\\\\Desktop\\\\Evangadi\\\\phase 4\\\\New folder\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2024-12-07T23:48:17.175Z] [runtime-status] [166872] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [166872] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2024-12-07T23:48:17.175Z] [runtime-status] [166872] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.1.1","resolution":"C:\\Users\\Nirto\\Desktop\\Evangadi\\phase 4\\New folder\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [166872] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.1.1\",\"resolution\":\"C:\\\\Users\\\\Nirto\\\\Desktop\\\\Evangadi\\\\phase 4\\\\New folder\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2024-12-07T23:48:17.600Z] [runtime-status] [166872] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [166872] Checked functions.config() {\"config\":{}}"}}
+[debug] [2024-12-07T23:48:17.600Z] [runtime-status] [166872] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"6.1.1","resolution":"C:\\Users\\Nirto\\Desktop\\Evangadi\\phase 4\\New folder\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [166872] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"6.1.1\",\"resolution\":\"C:\\\\Users\\\\Nirto\\\\Desktop\\\\Evangadi\\\\phase 4\\\\New folder\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}}"}}
+[debug] [2024-12-07T23:48:17.602Z] [runtime-status] [166872] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.1.1","resolution":"C:\\Users\\Nirto\\Desktop\\Evangadi\\phase 4\\New folder\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [166872] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.1.1\",\"resolution\":\"C:\\\\Users\\\\Nirto\\\\Desktop\\\\Evangadi\\\\phase 4\\\\New folder\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2024-12-07T23:48:17.607Z] [runtime-status] [166872] Resolved module firebase-admin {"declared":true,"installed":true,"version":"12.7.0","resolution":"C:\\Users\\Nirto\\Desktop\\Evangadi\\phase 4\\New folder\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [166872] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"C:\\\\Users\\\\Nirto\\\\Desktop\\\\Evangadi\\\\phase 4\\\\New folder\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2024-12-07T23:48:17.613Z] [runtime-status] [166872] Resolved module firebase-functions {"declared":true,"installed":true,"version":"6.1.1","resolution":"C:\\Users\\Nirto\\Desktop\\Evangadi\\phase 4\\New folder\\functions\\node_modules\\firebase-functions\\lib\\v2\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [166872] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"6.1.1\",\"resolution\":\"C:\\\\Users\\\\Nirto\\\\Desktop\\\\Evangadi\\\\phase 4\\\\New folder\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v2\\\\index.js\"}"}}
+[debug] [2024-12-07T23:48:17.614Z] [runtime-status] [166872] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"12.7.0","resolution":"C:\\Users\\Nirto\\Desktop\\Evangadi\\phase 4\\New folder\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [166872] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"12.7.0\",\"resolution\":\"C:\\\\Users\\\\Nirto\\\\Desktop\\\\Evangadi\\\\phase 4\\\\New folder\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2024-12-07T23:48:17.863Z] [runtime-status] [166872] Functions runtime initialized. {"cwd":"C:\\Users\\Nirto\\Desktop\\Evangadi\\phase 4\\New folder\\functions","node_version":"20.17.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [166872] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\Nirto\\\\Desktop\\\\Evangadi\\\\phase 4\\\\New folder\\\\functions\",\"node_version\":\"20.17.0\"}"}}
+[debug] [2024-12-07T23:48:17.864Z] [runtime-status] [166872] Listening to port: \\?\pipe\fire_emu_2fb367e9749d481a {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [166872] Listening to port: \\\\?\\pipe\\fire_emu_2fb367e9749d481a"}}
+[debug] [2024-12-07T23:48:17.937Z] [worker-us-central1-api-20627b89-35d0-460a-8c53-590322dfc7ab]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-20627b89-35d0-460a-8c53-590322dfc7ab]: IDLE"}}
+[debug] [2024-12-07T23:48:17.937Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2024-12-07T23:48:17.938Z] [worker-us-central1-api-20627b89-35d0-460a-8c53-590322dfc7ab]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-20627b89-35d0-460a-8c53-590322dfc7ab]: BUSY"}}
+[debug] [2024-12-07T23:48:17.946Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 8.004ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 8.004ms"}}
+[debug] [2024-12-07T23:48:17.948Z] [worker-us-central1-api-20627b89-35d0-460a-8c53-590322dfc7ab]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-20627b89-35d0-460a-8c53-590322dfc7ab]: IDLE"}}
+[debug] [2024-12-07T23:48:17.948Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-12-07T23:48:17.948Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-12-07T23:48:17.948Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
