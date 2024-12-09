@@ -7,8 +7,8 @@ import Orders from "./Pages/Orders/Orders";
 import Cart from "./Pages/Cart/Cart";
 import Results from "./Pages/Results/Results";
 import ProductDetail from "./Pages/ProductDetail/ProductDetail";
-import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
 import ProtectRoute from "./Components/ProtectRoute/ProtectRoute";
 const stripePromise = loadStripe(
   "pk_test_51QRznVJ2mBH3krU8sphMUx6wrRhoZvxPvJGryWwUkUjvSgfJC9QuWdfUAdlANE7xW9lXk1YzCZsdrOTW9pUYCeND00h4wj5gfT"

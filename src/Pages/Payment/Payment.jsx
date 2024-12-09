@@ -3,6 +3,7 @@ import classes from "./Payment.module.css";
 import LayOut from "../../Components/LayOut/LayOut";
 import { DataContext } from "../../Components/DataProvider/DataProvider";
 import ProductCard from "../../Components/Product/ProductCard";
+// import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 import { useStripe, useElements, CardElement } from "@stripe/react-stripe-js";
 import CurrencyFormat from "../../Components/CurrencyFormat/CurrencyFormat";
 import { axiosInstance } from "../../Api/axios";
@@ -117,8 +118,8 @@ function Payment() {
                   <small style={{ color: "red" }}>{cardError}</small>
                 )}
                 {/* card element */}
-                <CardElement onChange={handleChange} />
 
+                <CardElement onChange={handleChange} />
                 {/* price */}
                 <div className={classes.payment__price}>
                   <div>
