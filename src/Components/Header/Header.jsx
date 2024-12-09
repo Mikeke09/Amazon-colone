@@ -41,7 +41,7 @@ const Header = () => {
               <option value="">All</option>
             </select>
             <input type="text" />
-            <BsSearch size={25} />
+            <BsSearch size={38} />
           </div>
           {/* other section */}
           <div className={classes.order__container}>
